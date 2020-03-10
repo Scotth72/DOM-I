@@ -57,7 +57,6 @@ const products = infoh4[3]
 const vision = infoh4[4]
 
 const textArr = document.querySelectorAll(`.text-content p`)
-
 const para1 = textArr[0]
 const para2 = textArr[1]
 const para3 = textArr[2]
@@ -96,10 +95,10 @@ const midImg = document.querySelector(`.middle-img`)
 midImg.setAttribute(`src`, siteContent[`main-content`][`middle-img-src`])
 
 const contactTitleh4 = document.querySelector(`.contact h4`)
-contactTitleh4.textContent[`contact`][`contact-h4`]
+contactTitleh4.textContent =siteContent[`contact`][`contact-h4`]
 
 const contact = document.querySelectorAll(`.contact p`)
-const address = conact[0]
+const address = contact[0]
 const phone = contact[1]
 const email = contact[2]
 
@@ -108,4 +107,17 @@ phone.textContent = siteContent[`contact`][`phone`]
 email.textContent = siteContent[`contact`][`email`]
 
 const footer = document.querySelector(`footer p`)
-footer.textContent[`footer`][`copyright`]
+footer.textContent = siteContent[`footer`][`copyright`]
+
+const thing = document.createElement(`a`)
+thing.textContent = `sign up`
+const thing2 = document.createElement(`a`)
+thing2.textContent = `patreon`
+
+const growNav = document.querySelector(`nav`)
+growNav.prepend(thing)
+growNav.append(thing2)
+
+navArr.forEach(item => {
+  item.style.color = `green`
+})
